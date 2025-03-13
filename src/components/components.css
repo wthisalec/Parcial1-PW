@@ -1,0 +1,12 @@
+.container_login{   
+    background-color: #0f5687;
+}
+
+.home{
+    background-color:#0f5687;
+    padding: '20px';
+    border-radius: '10px';
+    display: 'flex';
+    justify-content: 'space-around';
+    width: '50%';
+}
