@@ -1,39 +1,28 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
+import "./components.css";
 
 function Home() {
+    const { t } = useTranslation();
+
     return (
-        <div style={{ 
-            backgroundImage: `url(${require('../imagenes/fondo_comida.jpeg')})`, 
-            backgroundSize: 'cover', 
-            backgroundPosition: 'center', 
-            height: '100vh', 
-            width: '100vw', 
-            display: 'flex', 
-            justifyContent: 'center', 
-            alignItems: 'center' 
-        }}>
-            <div style={{backgroundColor:"#0f5687",
-                    padding: '20px',
-                    borderRadius: '10px',
-                    display: 'flex',
-                    justifyContent: 'space-around',
-                    width: '50%'}}>
+        <div className="home-container">
+            <div className="home-content">
                 <Link to="/menu">
-                    <img src={require('../imagenes/menu.jpg')} alt="menu" style={{ width: '100px', height: '100px' }} />
-                
+                    <img src={require('../imagenes/menu.jpg')} alt="menu" />
+                    <p>{t("menu")}</p>
                 </Link>
-                <p>MENU</p>
+
                 <Link to="/stores">
-                    <img src={require('../imagenes/tienda.png')} alt="stores" style={{ width: '100px', height: '100px' }} />
-                    
+                    <img src={require('../imagenes/tienda.png')} alt="stores" />
+                    <p>{t("stores")}</p>
                 </Link>
-                <p>STORES</p>
+
                 <Link to="/cart">
-                    <img src={require('../imagenes/carrito.png')} alt="cart" style={{ width: '100px', height: '100px' }} />
-                
+                    <img src={require('../imagenes/carrito.png')} alt="cart" />
+                    <p>{t("cart")}</p>
                 </Link>
-                <p>CART</p>
             </div>
         </div>
     );

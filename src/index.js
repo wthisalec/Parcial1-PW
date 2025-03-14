@@ -6,21 +6,24 @@ import Home from './components/Home';
 import LoginForm from './components/LoginForm';
 import Menu from './components/Menu';
 import Stores from './components/Stores';
+import './components/i18n';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Router>
-      <Routes>
-        <Route path="/" element={<LoginForm/>} />
-        <Route path="/login" element={<LoginForm />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/stores" element={<Stores />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
-    </Router>
+    <React.StrictMode>
+        <Router>
+            <Routes>
+                <Route path="/" element={<LoginForm />} />
+                <Route path="/login" element={<LoginForm />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/menu" element={<Menu />} />
+                <Route path="/stores" element={<Stores />} />
+                <Route path="/cart" element={<Cart />} />
+            </Routes>
+        </Router>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
